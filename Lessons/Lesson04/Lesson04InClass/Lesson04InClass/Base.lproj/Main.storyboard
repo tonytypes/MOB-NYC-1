@@ -15,9 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjs-io-eIe">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5pn-UI-rx6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ0-xh-g2x">
+                                <rect key="frame" x="279" y="348" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="xjs-io-eIe" secondAttribute="centerX" id="03Z-E7-bcF"/>
+                            <constraint firstAttribute="centerY" secondItem="xjs-io-eIe" secondAttribute="centerY" id="9iC-SQ-exM"/>
+                            <constraint firstItem="dJ0-xh-g2x" firstAttribute="top" secondItem="xjs-io-eIe" secondAttribute="bottom" constant="33" id="YRE-nS-5rL"/>
+                            <constraint firstAttribute="centerX" secondItem="dJ0-xh-g2x" secondAttribute="centerX" id="b3R-ai-VfR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="dJ0-xh-g2x" id="O8N-Dc-ynm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
