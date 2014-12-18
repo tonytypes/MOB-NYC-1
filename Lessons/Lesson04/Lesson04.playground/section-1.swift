@@ -107,8 +107,33 @@ println(lengths.1)
 //stringOptional("Tony")
 //stringOptional(nil)
 
+// In class on 12/17 -- 
+// Find out if a string has the letter lowercase "a" in it
+
+func foo (str: String) -> Bool {
+    for character in str {
+        if character == "a" {
+            return true
+        }
+    }
+    return false
+}
+
+println(foo("minnie"))
+println(foo("annie"))
+
 // TODO: Write a function that takes one parameter, n, and returns an integer, the nth series in the fibonacci
 // sequence. The first fibonacci number is 0, the second is 1, the third is 1, the fourth is 2, fifth is 3, sixth is 5, etc. fibonacci numbers at sequence n are the sum of the n-1 and n-2 fibonacci number.
+
+func fibo (n: Int) -> Int {
+    var seriesNumber = 0
+    0+1=2
+    n1+n2=n3
+    n2+n3=n4
+}
+
+// should equal 2
+println(fibo(4))
 
 // TODO: Write a function that calls the above function in order to print the sum of the first 20 fibonacci numbers.
 
