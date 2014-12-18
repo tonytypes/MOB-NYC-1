@@ -12,6 +12,10 @@
 		5D06C68219D8CFFE0082F2DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C68019D8CFFE0082F2DE /* Main.storyboard */; };
 		5D06C68419D8CFFE0082F2DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C68319D8CFFE0082F2DE /* Images.xcassets */; };
 		5D06C69319D8CFFE0082F2DE /* Lesson01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C69219D8CFFE0082F2DE /* Lesson01Tests.swift */; };
+		8851C0461A38101F00939F20 /* cooper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8851C0451A38101F00939F20 /* cooper.jpg */; };
+		8851C0491A38138100939F20 /* cherryPie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8851C0471A38138100939F20 /* cherryPie.png */; };
+		8851C04A1A38138100939F20 /* cupOfCoffee.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8851C0481A38138100939F20 /* cupOfCoffee.JPG */; };
+		8851C04C1A3815B100939F20 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851C04B1A3815B100939F20 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		5D06C68C19D8CFFE0082F2DE /* Lesson01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lesson01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D06C69119D8CFFE0082F2DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D06C69219D8CFFE0082F2DE /* Lesson01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson01Tests.swift; sourceTree = "<group>"; };
+		8851C0451A38101F00939F20 /* cooper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cooper.jpg; sourceTree = "<group>"; };
+		8851C0471A38138100939F20 /* cherryPie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cherryPie.png; sourceTree = "<group>"; };
+		8851C0481A38138100939F20 /* cupOfCoffee.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cupOfCoffee.JPG; sourceTree = "<group>"; };
+		8851C04B1A3815B100939F20 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,10 @@
 			children = (
 				5D06C67C19D8CFFE0082F2DE /* AppDelegate.swift */,
 				5D06C67E19D8CFFE0082F2DE /* ViewController.swift */,
+				8851C04B1A3815B100939F20 /* InfoViewController.swift */,
 				5D06C68019D8CFFE0082F2DE /* Main.storyboard */,
 				5D06C68319D8CFFE0082F2DE /* Images.xcassets */,
+				8851C04D1A3816B400939F20 /* images */,
 				5D06C67A19D8CFFE0082F2DE /* Supporting Files */,
 			);
 			path = Lesson01;
@@ -107,6 +117,16 @@
 				5D06C69119D8CFFE0082F2DE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8851C04D1A3816B400939F20 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8851C0451A38101F00939F20 /* cooper.jpg */,
+				8851C0471A38138100939F20 /* cherryPie.png */,
+				8851C0481A38138100939F20 /* cupOfCoffee.JPG */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D06C68219D8CFFE0082F2DE /* Main.storyboard in Resources */,
+				8851C0461A38101F00939F20 /* cooper.jpg in Resources */,
 				5D06C68419D8CFFE0082F2DE /* Images.xcassets in Resources */,
+				8851C04A1A38138100939F20 /* cupOfCoffee.JPG in Resources */,
+				8851C0491A38138100939F20 /* cherryPie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D06C67F19D8CFFE0082F2DE /* ViewController.swift in Sources */,
+				8851C04C1A3815B100939F20 /* InfoViewController.swift in Sources */,
 				5D06C67D19D8CFFE0082F2DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
