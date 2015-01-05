@@ -22,11 +22,25 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5pn-UI-rx6"/>
+                                    <action selector="button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8cF-eu-z7i"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ0-xh-g2x">
-                                <rect key="frame" x="279" y="348" width="42" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill total" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMg-UX-3Kz">
+                                <rect key="frame" x="252" y="210" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip percent" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2iY-2S-KC2">
+                                <rect key="frame" x="252" y="247" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hy-dr-gHc">
+                                <rect key="frame" x="196" y="345" width="208" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="TMS-iK-yJj"/>
+                                    <constraint firstAttribute="width" constant="208" id="xxZ-h3-cWD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,13 +50,14 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="xjs-io-eIe" secondAttribute="centerX" id="03Z-E7-bcF"/>
+                            <constraint firstAttribute="centerX" secondItem="5Hy-dr-gHc" secondAttribute="centerX" id="9SO-1Y-bWU"/>
                             <constraint firstAttribute="centerY" secondItem="xjs-io-eIe" secondAttribute="centerY" id="9iC-SQ-exM"/>
-                            <constraint firstItem="dJ0-xh-g2x" firstAttribute="top" secondItem="xjs-io-eIe" secondAttribute="bottom" constant="33" id="YRE-nS-5rL"/>
-                            <constraint firstAttribute="centerX" secondItem="dJ0-xh-g2x" secondAttribute="centerX" id="b3R-ai-VfR"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="dJ0-xh-g2x" id="O8N-Dc-ynm"/>
+                        <outlet property="label" destination="5Hy-dr-gHc" id="TUR-rN-y0F"/>
+                        <outlet property="textField1" destination="fMg-UX-3Kz" id="mei-f1-rz4"/>
+                        <outlet property="textField2" destination="2iY-2S-KC2" id="tbI-HC-q2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

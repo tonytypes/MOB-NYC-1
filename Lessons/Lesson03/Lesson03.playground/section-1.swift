@@ -48,7 +48,7 @@ while counter < 50 {
 }
 
 // TODO: Create a constant called number
-let number: Float = 8
+let number: Float = 21
 
 // TODO: Print whether the above number is even
 var checker1: Int = 0
@@ -62,6 +62,11 @@ if checker1floated == checker2 {
 } else {
     println("odd")
 }
+
+var checker3: Int = 0
+checker3 = Int(number)
+checker3 % 2
+
 
 //best way is using "remainders". when you type the following, you'll get a remainder or not depending on... umm... dividing by 2, perhaps: 19%10 ... the remainder will be 9. This is the key to doing this easily.
 

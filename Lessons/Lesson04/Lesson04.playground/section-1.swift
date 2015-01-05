@@ -32,30 +32,30 @@
 
 //If we want to print a line for two names, we can by doing this:
 
-func helloWorldToTwoPeople(nameOne: String, nameTwo: String) {
-    println("Hello \(nameOne) and \(nameTwo)!")
-}
-
-helloWorldToTwoPeople("Sean", "Travis")
-
-func formattedHelloWorldTextToName(name: String) -> String {
-    return "Hello \(name), have a great class!"
-}
-
-println(formattedHelloWorldTextToName("Tony") + " Woohoo!")
-var formattedText = formattedHelloWorldTextToName("Tony")
-println(formattedText)
-
-func lengthOfNames(nameOne: String, nameTwo: String) -> (Int, Int) {
-    // A function MUST return something, or else Swift doesn't know what to do with it
-    return (countElements(nameOne), countElements(nameTwo))
-}
-
-lengthOfNames("Tony","Lazaro")
-
-var lengths = lengthOfNames("Tony", "Lazaro")
-println(lengths.0)
-println(lengths.1)
+//func helloWorldToTwoPeople(nameOne: String, nameTwo: String) {
+//    println("Hello \(nameOne) and \(nameTwo)!")
+//}
+//
+//helloWorldToTwoPeople("Sean", "Travis")
+//
+//func formattedHelloWorldTextToName(name: String) -> String {
+//    return "Hello \(name), have a great class!"
+//}
+//
+//println(formattedHelloWorldTextToName("Tony") + " Woohoo!")
+//var formattedText = formattedHelloWorldTextToName("Tony")
+//println(formattedText)
+//
+//func lengthOfNames(nameOne: String, nameTwo: String) -> (Int, Int) {
+//    // A function MUST return something, or else Swift doesn't know what to do with it
+//    return (countElements(nameOne), countElements(nameTwo))
+//}
+//
+//lengthOfNames("Tony","Lazaro")
+//
+//var lengths = lengthOfNames("Tony", "Lazaro")
+//println(lengths.0)
+//println(lengths.1)
 
 // Complete these, in order, writing code under each TODO statement. Each statement calls for a function to be written, write each of them and then immediately call it after the function definition.
 
@@ -110,30 +110,91 @@ println(lengths.1)
 // In class on 12/17 -- 
 // Find out if a string has the letter lowercase "a" in it
 
-func foo (str: String) -> Bool {
-    for character in str {
-        if character == "a" {
-            return true
-        }
-    }
-    return false
-}
-
-println(foo("minnie"))
-println(foo("annie"))
+//func foo (str: String) -> Bool {
+//    for character in str {
+//        if character == "a" {
+//            return true
+//        }
+//    }
+//    return false
+//}
+//
+//println(foo("minnie"))
+//println(foo("annie"))
 
 // TODO: Write a function that takes one parameter, n, and returns an integer, the nth series in the fibonacci
 // sequence. The first fibonacci number is 0, the second is 1, the third is 1, the fourth is 2, fifth is 3, sixth is 5, etc. fibonacci numbers at sequence n are the sum of the n-1 and n-2 fibonacci number.
 
-func fibo (n: Int) -> Int {
-    var seriesNumber = 0
-    0+1=2
-    n1+n2=n3
-    n2+n3=n4
+/*
+var n = 10
+
+func fibo () {
+    var counter = 2
+    var prevPrevN = 0
+    var prevN = 1
+    var newN = 1
+    if n > 2 {
+        while counter < n {
+            counter = counter + 1
+            newN = prevN + prevPrevN
+            prevPrevN = prevN
+            prevN = newN
+            println(newN)
+        }
+        println(newN)
+    } else if n == 2 {
+        println(1)
+    } else if n == 1 {
+        println(0)
+    } else {
+    println("That is not a valid number.")
+    }
+
+}
+fibo()
+
+//println(fibo(n))
+
+*/
+
+class FibonacciAdder {
+    class func fibonacciNumberAtIndex (indexOfFibonacciNumber: Int) -> Int {
+        //  var indexOfFibonacciNumber = 10
+        var counter = 2
+        var prevPrevN = 0
+        var prevN = 1
+        var newN = 1
+        if indexOfFibonacciNumber > 2 {
+            while counter < indexOfFibonacciNumber {
+                counter = counter + 1
+                newN = prevN + prevPrevN
+                prevPrevN = prevN
+                prevN = newN
+            }
+            //                println(newN)
+            //                return String(newN)
+            return newN
+        } else if indexOfFibonacciNumber == 2 {
+            //                println(1)
+            //                return String(1)
+            return 1
+        } else if indexOfFibonacciNumber == 1 {
+            //                println(0)
+            //                return String(0)
+            return 0
+        } else {
+            //                println("You've entered an invalid number.")
+            //                return "You've entered an invalid number"
+            return 0
+            
+        }
+        
+    }
+
 }
 
-// should equal 2
-println(fibo(4))
+var number = FibonacciAdder.fibonacciNumberAtIndex(5)
+
 
 // TODO: Write a function that calls the above function in order to print the sum of the first 20 fibonacci numbers.
 
