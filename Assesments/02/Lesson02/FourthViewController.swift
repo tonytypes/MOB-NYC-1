@@ -16,7 +16,8 @@ class FourthViewController: UIViewController {
         
         let input = textField.text.toInt()
         if let inp = input {
-            var number = FibonacciAdder.fibonacciNumberAtIndex(inp)
+            let adder = FibonacciAdder()
+            let number = adder.fibonacciNumberAtIndex(inp)
             label.text = number
             // I've written the println below because I think the instructions said to
             println(number)
@@ -24,32 +25,9 @@ class FourthViewController: UIViewController {
     
     }
 
-    class FibonacciAdder {
-        class func fibonacciNumberAtIndex (indexOfFibonacciNumber: Int) -> String {
-            var counter = 2
-            var prevPrevN = 0
-            var prevN = 1
-            var newN = 1
-            if indexOfFibonacciNumber > 2 {
-                while counter < indexOfFibonacciNumber {
-                    counter = counter + 1
-                    newN = prevN + prevPrevN
-                    prevPrevN = prevN
-                    prevN = newN
-                }
-                return String(newN)
-            } else if indexOfFibonacciNumber == 2 {
-                return String(1)
-            } else if indexOfFibonacciNumber == 1 {
-                return String(0)
-            } else {
-                return "You've entered an invalid number"
-            }
-        }
-    }
-
+    
     // Questions for instructors:
-    // I'm confused about the placement of classes (and functions,
+    // I was confused about the placement of classes (and functions,
     // for that matter). Depending on where I placed my FibonacciAdder
     // class, I sometimes got an error on the line where I tried to
     // retrieve it, saying that I had to declare the "local variable"
