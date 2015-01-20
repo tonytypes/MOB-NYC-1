@@ -198,13 +198,93 @@ var number = FibonacciAdder.fibonacciNumberAtIndex(5)
 
 // TODO: Write a function that calls the above function in order to print the sum of the first 20 fibonacci numbers.
 
+
+// Some notes on different ways to add increments:
+
+/*
+
+var f = 3
+f = f + 1
+f += 1
+f++ //use the variable, and then increment it
+println(f)
+++f //increment the variable, and then use it
+println(f)
+
+*/
+
 // TODO: Write a function that takes in a number and prints out whether it is prime, composite or neither.
 
+/*
+
+func primeDetector(testNumber: Int) -> String {
+    let neither = "neither"
+    let prime = "prime"
+    let composite = "composite"
+    
+    //identify exceptional ints, -, 0, 1, 2
+    if testNumber <= 1 {
+        return neither
+    } else if testNumber == 2 {
+        return prime
+    }
+    
+    //divide testBumber by each number that is smaller than it
+    for i in 2...(testNumber - 1) {
+        if testNumber % i == 0 {
+            return composite
+        }
+    }
+    
+    //give result
+    return prime
+}
+
+let result = primeDetector(5)
+
+*/
+
 // TODO: Write a function that prints out each of the first 20 fibonacci numbers and whether they are prime. (e.g. 0 is not prime or composite, 1 is prime, etc)
+
+/*
+
+func fibValueAndPrime(toIndex: Int) {
+    for i in 1...toIndex {
+        let fibVal = FibonacciAdder.fibonacciNumberAtIndex(i)
+        let primeOrComposite = primeDetector(fibVal)
+        println("The \(i) index is \(fibVal), and is \(primeOrComposite)")
+    }
+}
+
+fibValueAndPrime(10)
+
+*/
 
 // TODO: Write a function that takes in two numbers, a bill amount and an optional tip percentage (represented as a float, e.g. .2 = 20% tip). Return a tuple with the total bill amount and the tip amount (if included).
 
 // TODO: Write a function that takes in a string and returns a string that is the reverse of the input. Append two strings using the + operator.
+
+
+
+func reverser(input: String) -> String {
+    
+    //establish some empty String variables to be used in the for loop
+    var output: String = ""
+    var prev: String = ""
+    
+    //run a for loop for each character and store them in a way that appends them in reverse order
+    for i in input {
+        output = String(i)+prev
+        prev = output
+    }
+    
+    //take everything that was stored and return them as a single array
+    return output
+
+}
+
+reverser("Tony")
+
 
 // BONUS TODO: Write a function that takes in an array of strings and a search term string. Return a boolean indicating whether the search term string exists in the array.
 

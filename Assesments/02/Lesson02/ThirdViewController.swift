@@ -33,7 +33,8 @@ class ThirdViewController: UIViewController {
             return "You must enter an integer"
         }
     }
-    
+  
+  UIColor.
     
 /*
     TODO six: Hook up the number input text field, button and text label to this class. When the button is pressed, a message should be printed to the label indicating whether the number is even.
