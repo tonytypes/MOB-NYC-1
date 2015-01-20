@@ -31,5 +31,9 @@ class ViewController: UITableViewController, UITableViewDataSource, UITableViewD
   override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
     // performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
   }
+  
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 }
 
