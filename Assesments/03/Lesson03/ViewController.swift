@@ -22,20 +22,20 @@ class ViewController: UIViewController {
     
     swipeBox.userInteractionEnabled = true
     
-    var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-    var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+    var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes"))
+    var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes"))
     
-    leftSwipe.direction = .Left
+    leftSwipe.direction = UISwipeGestureRecognizerDirection.Left
     rightSwipe.direction = .Right
     
     swipeBox.addGestureRecognizer(leftSwipe)
     swipeBox.addGestureRecognizer(rightSwipe)
   }
   
-  func handleSwipes(sender:UISwipeGestureRecognizer) {
-    if sender.direction == .Left || sender.direction == .Right {
+  func handleSwipes() {
+    // if sender.direction == .Left || sender.direction == .Right {
       presentViewController(ImageViewController(), animated: true, completion: nil)
-    }
+//    }
   }
   
     /*

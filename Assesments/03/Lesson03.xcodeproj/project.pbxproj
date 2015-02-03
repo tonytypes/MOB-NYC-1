@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1900926F1A7881020028DD38 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1900926E1A7881020028DD38 /* Dog.swift */; };
 		197A4C4D1A74536A00C8C289 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A4C4C1A74536A00C8C289 /* ImageViewController.swift */; };
-		197A4C4F1A74583E00C8C289 /* imageForModal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 197A4C4E1A74583E00C8C289 /* imageForModal.jpg */; };
 		5DCED98919D8DC9B00DE1DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCED98819D8DC9B00DE1DC2 /* AppDelegate.swift */; };
 		5DCED98B19D8DC9B00DE1DC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCED98A19D8DC9B00DE1DC2 /* ViewController.swift */; };
 		5DCED98E19D8DC9B00DE1DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DCED98C19D8DC9B00DE1DC2 /* Main.storyboard */; };
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		1900926E1A7881020028DD38 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		197A4C4C1A74536A00C8C289 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		197A4C4E1A74583E00C8C289 /* imageForModal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = imageForModal.jpg; path = ../../../../../imageForModal.jpg; sourceTree = "<group>"; };
 		5DCED98319D8DC9B00DE1DC2 /* Lesson03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCED98719D8DC9B00DE1DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCED98819D8DC9B00DE1DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		5DCED98519D8DC9B00DE1DC2 /* Lesson03 */ = {
 			isa = PBXGroup;
 			children = (
-				197A4C4E1A74583E00C8C289 /* imageForModal.jpg */,
 				5DCED9A819D8DF0800DE1DC2 /* ArrayTableViewController.swift */,
 				5DCED9AA19D8DF4E00DE1DC2 /* Animal.swift */,
 				1900926E1A7881020028DD38 /* Dog.swift */,
@@ -206,7 +203,6 @@
 			files = (
 				5DCED98E19D8DC9B00DE1DC2 /* Main.storyboard in Resources */,
 				5DCED99019D8DC9B00DE1DC2 /* Images.xcassets in Resources */,
-				197A4C4F1A74583E00C8C289 /* imageForModal.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

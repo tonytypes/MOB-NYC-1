@@ -53,6 +53,11 @@ class MainTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        cell.backgroundColor = UIColor.blueColor()
+    }
+        
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

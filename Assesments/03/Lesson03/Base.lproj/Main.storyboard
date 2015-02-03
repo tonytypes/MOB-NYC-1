@@ -60,6 +60,9 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                                     <action selector="displayTableVCButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oMT-hW-bnR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0p-ga-7mV">
+                                <rect key="frame" x="181" y="41" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>

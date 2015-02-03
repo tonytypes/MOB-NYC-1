@@ -21,11 +21,11 @@ class ImageViewController: UIViewController {
         // Diplay image
         let imageForModalName = "imageForModal.jpg"
         let imageForModal = UIImage(named: imageForModalName)
-        let imageForModalView = UIImageView(image: imageForModal!)
+        let imageForModalView = UIImageView(image: imageForModal!) // why the "!" ?
         imageForModalView.frame = CGRect(x: 0, y: 20, width: 200, height: 240)
         view.addSubview(imageForModalView)
         
-        // Creat dismiss button
+        // Create dismiss button
         let dismissButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         dismissButton.setTitle("Close", forState: .Normal)
         dismissButton.frame = CGRectMake(0,260,70,30)
@@ -36,6 +36,9 @@ class ImageViewController: UIViewController {
 
     }
 
+    func hello() {
+        view.constraints
+    }
     
     // Dismiss this modal
     func dismissTheModal(){
