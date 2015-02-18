@@ -11,6 +11,7 @@ import UIKit
 class ExerciseViewController: UIViewController {
     let exerciseView = UIView()
     let exerciseDescription = UILabel()
+    var toolbar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class ExerciseViewController: UIViewController {
         self.exerciseView.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(exerciseView)
         
-        var toolbar = UIToolbar(frame: CGRect(x: 0, y: CGRectGetMaxY(self.view.frame) - 44, width: CGRectGetWidth(self.view.frame), height: 44))
+        toolbar = UIToolbar(frame: CGRect(x: 0, y: CGRectGetMaxY(self.view.frame) - 44, width: CGRectGetWidth(self.view.frame), height: 44))
         self.view.addSubview(toolbar)
         toolbar.autoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleWidth
         toolbar.setItems(
@@ -60,5 +61,6 @@ class ExerciseViewController: UIViewController {
                 self.exerciseView.hidden = self.exerciseView.alpha == 0.0
         })
     }
+    
 }
 

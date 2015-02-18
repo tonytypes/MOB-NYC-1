@@ -24,6 +24,45 @@ class FourthViewController: ExerciseViewController {
         
         Your view should be in self.exerciseView, not self.view.
         */
+        
+        var scrollView = UIScrollView()
+        self.exerciseView.addSubview(scrollView)
+
+        view.addConstraint(NSLayoutConstraint(
+            item: scrollView,
+            attribute: .Width,
+            relatedBy: .Equal,
+            toItem: self.exerciseView,
+            attribute: .Width,
+            multiplier: 1.0,
+            constant: 0))
+        view.addConstraint(NSLayoutConstraint(
+            item: scrollView,
+            attribute: .Height,
+            relatedBy: .Equal,
+            toItem: self.exerciseView,
+            attribute: .Height,
+            multiplier: 1.0,
+            constant: 0))
+        view.addConstraint(NSLayoutConstraint(
+            item: scrollView,
+            attribute: .Left,
+            relatedBy: .Equal,
+            toItem: self.exerciseView,
+            attribute: .Left,
+            multiplier: 1.0,
+            constant: 0))
+        view.addConstraint(NSLayoutConstraint(
+            item: scrollView,
+            attribute: .Top,
+            relatedBy: .Equal,
+            toItem: self.topLayoutGuide,
+            attribute: .Bottom,
+            multiplier: 1.0,
+            constant: 0))
+
+        
+        
     }
     
     override func shouldAutorotate() -> Bool {
