@@ -12,8 +12,15 @@ class ThirdViewController: ExerciseViewController {
 
     // PROBLEM: bottomLayoutGuide doesn't work. It returns 0.0 when I println the length. WTF?
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // view.backgroundColor = UIColor.blueColor()
+        // exerciseView.backgroundColor = UIColor.redColor()
         self.exerciseDescription.text = "View 3"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: "next")
         /* TODO:
@@ -24,6 +31,53 @@ class ThirdViewController: ExerciseViewController {
         
         Your view should be in self.exerciseView, not self.view
         */
+        
+        
+        // Find and set the height of the bottom toolbar in view
+        var toolbarHeight: CGFloat = self.toolbar.frame.size.height
+        
+        // Set constraints for exerciseView so that it accounts for topLayoutGuide and the bottom toolbar. This way, all its subviews can reflect these as well.
+
+        exerciseView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        let evTop = NSLayoutConstraint(
+            item: exerciseView,
+            attribute: NSLayoutAttribute.Top,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: topLayoutGuide,
+            attribute: NSLayoutAttribute.Bottom,
+            multiplier: 1.0,
+            constant: 0
+        )
+        let evRight = NSLayoutConstraint(
+            item: exerciseView,
+            attribute: NSLayoutAttribute.Right,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.view,
+            attribute: NSLayoutAttribute.Right,
+            multiplier: 1.0,
+            constant: 0
+        )
+        let evBottom = NSLayoutConstraint(
+            item: exerciseView,
+            attribute: NSLayoutAttribute.Bottom,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: bottomLayoutGuide,
+            attribute: NSLayoutAttribute.Top,
+            multiplier: 1.0,
+            constant: -toolbarHeight
+        )
+        let evLeft = NSLayoutConstraint(
+            item: exerciseView,
+            attribute: NSLayoutAttribute.Left,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.view,
+            attribute: NSLayoutAttribute.Left,
+            multiplier: 1.0,
+            constant: 0
+        )
+        
+        self.view.addConstraints([evTop, evRight, evBottom, evLeft])
         
         // Set width, height, color of all boxes
         var boxWandH: CGFloat = 20.0
@@ -36,6 +90,7 @@ class ThirdViewController: ExerciseViewController {
         var blueBoxThree = UIView()
         var blueBoxFour = UIView()
         
+        // Set the all common constraints for boxes
         for view in [blueBoxOne, blueBoxTwo, blueBoxThree, blueBoxFour] {
             view.backgroundColor = boxColor
             view.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -58,81 +113,79 @@ class ThirdViewController: ExerciseViewController {
                 multiplier: 1.0,
                 constant: boxHeight))
         }
-        
         // Add remaining constraints that aren't alike for all boxes
         
         // blueBoxOne
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxOne,
             attribute: .Top,
             relatedBy: .Equal,
-            toItem: self.topLayoutGuide,
-            attribute: .Bottom,
+            toItem: exerciseView,
+            attribute: .Top,
             multiplier: 1.0,
             constant: 0))
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxOne,
             attribute: .Left,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: exerciseView,
             attribute: .Left,
             multiplier: 1.0,
             constant: 0))
         
         // blueBoxTwo
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxTwo,
             attribute: .Top,
             relatedBy: .Equal,
-            toItem: self.topLayoutGuide,
-            attribute: .Bottom,
+            toItem: exerciseView,
+            attribute: .Top,
             multiplier: 1.0,
             constant: 0))
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxTwo,
             attribute: .Right,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: exerciseView,
             attribute: .Right,
             multiplier: 1.0,
             constant: 0))
         
         // blueBoxThree
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxThree,
             attribute: .Bottom,
             relatedBy: .Equal,
-            toItem: self.bottomLayoutGuide,
-            attribute: .Top,
+            toItem: exerciseView,
+            attribute: .Bottom,
             multiplier: 1.0,
             constant: 0))
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxThree,
             attribute: .Right,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: exerciseView,
             attribute: .Right,
             multiplier: 1.0,
             constant: 0))
         
         // blueBoxFour
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxFour,
             attribute: .Bottom,
             relatedBy: .Equal,
-            toItem: self.bottomLayoutGuide,
-            attribute: .Top,
+            toItem: exerciseView,
+            attribute: .Bottom,
             multiplier: 1.0,
             constant: 0))
-        view.addConstraint(NSLayoutConstraint(
+        self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueBoxFour,
             attribute: .Left,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: exerciseView,
             attribute: .Left,
             multiplier: 1.0,
             constant: 0))
-        println(bottomLayoutGuide.length)
     }
     
     override func shouldAutorotate() -> Bool {

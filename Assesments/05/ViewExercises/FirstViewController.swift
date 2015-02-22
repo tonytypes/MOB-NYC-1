@@ -23,6 +23,7 @@ class FirstViewController: ExerciseViewController {
         Your view should be in self.exerciseView, not self.view
         */
         
+        
         // Set width and height of both boxes, and border widths too
         var boxWidth: CGFloat = self.exerciseView.frame.size.width
         var boxHeight: CGFloat = 10.0
@@ -55,7 +56,7 @@ class FirstViewController: ExerciseViewController {
         blackBox.layer.borderColor = UIColor.redColor().CGColor
         blackBox.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin
         exerciseView.addSubview(blackBox)
-
+        
     }
     
     // To self: below is an alternate way of calling the height of all of the stuff at the top of the screen. Note that bottomLayoutGuide can be used for the bottom of the screen.
