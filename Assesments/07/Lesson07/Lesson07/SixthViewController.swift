@@ -11,9 +11,19 @@ import UIKit
 
 class SixthViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
+    let fileName = "saved_array.txt"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let folderPath = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as? NSURL {
+            let filePath = folderPath.URLByAppendingPathComponent(self.fileName, isDirectory: false)
+            if let savedFileText = NSArray(contentsOfURL: filePath) {
+                textView.text = "\(textView.text) \n\ncontents of flat file: \n\(savedFileText)"
+            }
+        }
+        
     }
 }

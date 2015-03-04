@@ -149,8 +149,7 @@
                     <navigationItem key="navigationItem" id="W4c-fq-GLh">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="BAS-oR-Hjw">
                             <connections>
-                                <action selector="didTapNextButton:" destination="lWA-Qe-LpN" id="jaz-0J-cYV"/>
-                                <segue destination="03b-O5-o7r" kind="show" id="oNc-T8-vY0"/>
+                                <segue destination="03b-O5-o7r" kind="show" identifier="goToFourthVC" id="oNc-T8-vY0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -193,10 +192,13 @@
                     <navigationItem key="navigationItem" id="2d0-E9-8FN">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="JPY-mR-vzn">
                             <connections>
-                                <segue destination="ZvF-or-Q6s" kind="show" id="tmJ-2M-CqU"/>
+                                <segue destination="ZvF-or-Q6s" kind="show" identifier="" id="tmJ-2M-CqU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="sLH-y3-8UM" id="oZG-PV-Glj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdY-tK-zGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,6 +231,9 @@
                             <constraint firstItem="e66-bG-ZBU" firstAttribute="top" secondItem="qPA-4h-ilE" secondAttribute="bottom" id="wFw-wb-w01"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="qPA-4h-ilE" id="SHW-lf-ClT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oU3-RH-uDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,10 +270,14 @@
                     <navigationItem key="navigationItem" id="XAI-xr-9Z9">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="ezv-go-RsM">
                             <connections>
-                                <segue destination="mbK-IF-1aJ" kind="show" id="yHd-vX-Zt1"/>
+                                <segue destination="mbK-IF-1aJ" kind="show" identifier="goToSixthVC" id="yHd-vX-Zt1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="ezv-go-RsM" id="7km-ab-i1Z"/>
+                        <outlet property="textView" destination="nBD-AK-qjV" id="lCH-uX-2Qq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsy-el-VFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

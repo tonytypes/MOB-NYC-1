@@ -10,9 +10,19 @@ import UIKit
 
 class FourthViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+
+    let fileName = "saved_text.txt"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let folderPath = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as? NSURL {
+            let filePath = folderPath.URLByAppendingPathComponent(self.fileName, isDirectory: false)
+            if let savedFileText = NSString(contentsOfURL: filePath, encoding: NSUTF8StringEncoding, error: nil) {
+                textView.text = "\(textView.text) \n\ncontents of flat file: \n\(savedFileText)"
+            }
+        }
 
-        // Do any additional setup after loading the view.
     }
 }

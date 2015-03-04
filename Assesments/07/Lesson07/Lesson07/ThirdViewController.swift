@@ -11,46 +11,28 @@ import UIKit
 class ThirdViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-    
-    @IBAction func didTapNextButton(sender: UIBarButtonItem) {
-        println("did tap button")
-    }
-
     @IBOutlet weak var nextButton: UIBarButtonItem!
-    
-
+    func didTapNextButton(sender: UIBarButtonItem) {
+        saveViewText()
+        // Perform segue programmatically since I had to change the nextButton action
+        performSegueWithIdentifier("goToFourthVC", sender: nil)
+    }
+    let fileName = "saved_text.txt"
     
     func saveViewText() {
-        if let documentPath = NSFileManager.defaultManager().URLsForDirectory( .DocumentDirectory, inDomains: .UserDomainMask).first as? NSURL {
-            let filePath = documentPath.URLByAppendingPathComponent("savedViewText.txt",isDirectory: false)
-            var textToSave = textView.text
-            textToSave.writeToURL(filePath, atomically: false, encoding: NSUTF8StringEncoding, error: nil)
-            println("saved \n\n\(textToSave)")
+        if let folderPath = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as? NSURL {
+            let filePath = folderPath.URLByAppendingPathComponent(self.fileName, isDirectory: false)
+            let textToSave = NSString(string: textView.text)
+            textToSave.writeToURL(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
         }
     }
 
-    /*
-    func saveText() {
-        if let documentPath = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as? NSURL {
-            
-            let filePath = documentPath.URLByAppendingPathComponent("sample.txt", isDirectory: false)
-            let displayText = NSString(string: ThirdTextView.text)
-            
-            displayText.writeToURL(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
-            
-        } // end documentPath
-    }
-    */
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveViewText()
-                
+        
+        // Attribute target and action to the nextButton referencing outlet
         nextButton.target = self
-        nextButton.action = "printMessage:"
-        func printMessage(sender: UIBarButtonItem) {
-            println("next button was pressed")
-        }
+        nextButton.action = "didTapNextButton:"
     }
+    
 }
